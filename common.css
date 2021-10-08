@@ -522,6 +522,7 @@ body {
 #cont4slideWrap {
     width: 80%; margin: 0 auto;
     padding-top: 60px;
+    overflow: scroll;
 }
 #content4 ul {
     display: flex;
