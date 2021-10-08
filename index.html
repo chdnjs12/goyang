@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./common.js"></script>
+    <link href="./common.css" rel="stylesheet">
+    <title>고양사이버역사박물관</title>
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="#">고양사이버역사박물관</a></h1>
+        <nav id="gnb">
+            <h2 class="hidden">주메뉴</h2>
+            <ul>
+                <li><a href="#">고양 문화유산</a>
+                    <ul class="snb snb1">
+                        <li><a href="#">고양시 문화재현황</a></li>
+                        <li><a href="#">길에서 만나는 문화유산</a></li>
+                        <li><a href="#">발간자료실</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">5천년 역사</a>
+                    <ul class="snb snb2">
+                        <li><a href="#">5천년 역사 이야기</a></li>
+                        <li><a href="#">고양의 위인들</a></li>
+                        <li><a href="#">재미있는 동영상</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">고양오는 길</a>
+                    <ul class="snb snb3">
+                        <li><a href="#">고양 문화유산 답사</a></li>
+                        <li><a href="#">이색전시관</a></li>
+                        <li><a href="#">고양 가와지볍씨 박물관</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">요즘 고양은</a>
+                    <ul class="snb snb4">
+                        <li><a href="#">고양만의 랜드마크</a></li>
+                        <li><a href="#">평화를 기원하는 고양</a></li>
+                        <li><a href="#">가자!세계로!</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">함께할 고양</a>
+                    <ul class="snb snb5">
+                        <li><a href="#">문화체험</a></li>
+                        <li><a href="#">소셜 기자단</a></li>
+                        <li><a href="#">소통의 장</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="content1">
+            <h2 class="hidden">고양 문화유산</h2>
+            <section id="content1_1">
+                <h3 class="hidden">슬라이더</h3>
+                <div id="cont1_1slideWrap">
+                    <ul>
+                        <li class="slide1">
+                            <a href="#">
+                                <div class="slideTxt slideTxt1">
+                                    <p class="title">고양의 문화재</p>
+                                    <p>고양시의 아름다운 문화유산을 찾아서</p>
+                                </div>
+                            </a>
+                            </li>
+                        <li class="slide2">
+                            <a href="#">
+                                <div class="slideTxt slideTxt2">
+                                    <p class="title">길에서 만나는 문화유산</p>
+                                    <p>지도와 함께 알아보는 문화유산</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="slide3">
+                            <a href="#">
+                                <div class="slideTxt slideTxt3">
+                                    <p class="title">발간자료실</p>
+                                    <p>고양시를 책으로 알아보자</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <ul id="cont1_1btn">
+                    <li><a href="#" class="on">btn1</a></li>
+                    <li><a href="#">btn2</a></li>
+                    <li><a href="#">btn3</a></li>
+                </ul>
+            </section>
+
+            <section id="content1_2">
+                <div id="content1_2Wrap">
+                    <h3>발간 자료실</h3>
+                    <a href="#" id="main_book">main_book</a>
+                    <div id="cont1_2_slideWrap">
+                        <ul id="bookWrap">
+                            <li><a href="#">e-book1</a></li>
+                            <li><a href="#">e-book2</a></li>
+                            <li><a href="#">e-book3</a></li>
+                            <li><a href="#">e-book4</a></li>
+                            <li><a href="#">e-book5</a></li>
+                            <!-- 나중에 늘리기... -->
+                        </ul>
+                    </div>
+                    <div id="cont1_2btn">
+                        <a href="#" class="cont1_prev">이전</a>
+                        <a href="#" class="cont1_next">다음</a>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section id="content2">
+            <h2 class="hidden">한번가보자</h2>
+            <h3>이색전시관</h3>
+            <div id="cont2slideWrap">
+                <ul>
+                    <li><a href="#">전시관1</a></li>
+                    <li><a href="#">전시관2</a></li>
+                    <li><a href="#">전시관3</a></li>
+                    <li><a href="#">전시관4</a></li>
+                    <li><a href="#">전시관5</a></li>
+                    <li><a href="#">전시관6</a></li>
+                    <li><a href="#">전시관7</a></li>
+                    <li><a href="#">전시관8</a></li>
+                </ul>
+            </div>
+            <!-- 사진에 호버했을 때 사진 커지는 애니메이션 -->
+            <a href="#" class="cont2_prev">이전</a>
+            <a href="#" class="cont2_next">다음</a>
+        </section>
+
+        <p id="banner">
+            <a href="#">가와지볍씨 박물관</a>
+        </p>
+
+        <section id="content3">
+            <h2 class="hidden">함께할 고양</h2>
+            <h3>문화체험</h3>
+            <div id="cont3Wrap">
+                <ul id="cont3img">
+                    <li><a href="#">메인행사1</a></li>
+                    <li><a href="#">메인행사2</a></li>
+                    <li><a href="#">메인행사3</a></li>
+                </ul>
+
+                <ul id="cont3_notice">
+                    <li><a href="#"><span>1.&nbsp;&nbsp;</span>2020년 행주산성 해맞이 행사</a>2020.1.1</li>
+                    <li><a href="#"><span>2.&nbsp;&nbsp;</span>항일음악회 - 3.1운동 및 대한민국 임시정부 수립 100주년 기념</a>2019.4.1</li>
+                    <li><a href="#"><span>3.&nbsp;&nbsp;</span>2019 생생문화제(밤가시초가의 봄,여름,가을,겨울)</a>2019.4.14~2019.10.30</li>
+                    <li><a href="#"><span>4.&nbsp;&nbsp;</span>문화재 사랑 글짓기 공모전 안내(소중한 문화재 우리가 지켜요!)</a>2018.12.1~2018.12.31</li>
+                    <li><a href="#"><span>5.&nbsp;&nbsp;</span>고양사이버박물관과 함께하는 역사기행</a>2018.10.13</li>
+                </ul>
+                <a href="#">+more</a>
+            </div>
+        </section>
+
+        <section id="content4">
+            <hgroup class="hidden">
+                <h2>5천년 역사</h2>
+                <h3>재미있는 동영상</h3>
+            </hgroup>
+            <div id="cont4slideWrap">
+                <ul>
+                    <li><a href="#">영상1</a></li>
+                    <li><a href="#">영상2</a></li>
+                    <li><a href="#">영상3</a></li>
+                    <li><a href="#">영상4</a></li>
+                    <li><a href="#">영상5</a></li>
+                </ul>
+            </div>
+
+            <div id="cont4_btn1">
+                <a href="#" class="cont4_on">1</a>
+                <a href="#">2</a>
+                <li><a href="#">3</a>
+            </div>
+            <div id="cont4_btn2">
+                <a href="#" class="cont5_prev">prev</a>
+                <a href="#" class="cont5_next">next</a>
+            </div>
+        </section>
+
+        <section id="content5">
+            <h2 class="hidden">고양역사이야기,문화체험,소셜기자단</h2>
+            <ul>
+                <li>
+                    <h3>고양 역사이야기</h3>
+                    <ul>
+                        <li><a href="#">- 고양팔경(삼각산8경)</a></li>
+                        <li><a href="#">- 426주년 고양 행주대첩제 이야기</a></li>
+                        <li><a href="#">- 2019년, 고양의 역사 이야기(베스트 5)</a></li>
+                    </ul>
+                    <a href="#">more</a>
+                </li>
+                <li>
+                    <h3>문화체험</h3>
+                    <ul>
+                        <li><a href="#">- 고양시 관내 전시관 및 문화재 임시 휴관 안내</a></li>
+                        <li><a href="#">- 2020년 행주산성 해맞이 특별개방</a></li>
+                        <li><a href="#">- 2020년 행주산성 해맞이 행사</a></li>
+                    </ul>
+                    <a href="#">more</a>
+                </li>
+                <li>
+                    <h3>소셜 기자단</h3>
+                    <ul>
+                        <li><a href="#">- 고양 문화의 중심 어울림 누리</a></li>
+                        <li><a href="#">- 고양시청갤려리 600 꼼꼼히 살펴보기!</a></li>
+                        <li><a href="#">- 고양 가와지볍씨 박물관</a></li>
+                    </ul>
+                    <a href="#">more</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <aside id="aside">
+        <h2 class="hidden">사회숙제,동영상,역사이야기</h2>
+        <ul>
+            <li><a href="#">사회숙제</a></li>
+            <li><a href="#">동영상</a></li>
+            <li><a href="#">역사이야기</a></li>
+        </ul>
+        <a id="sitemap">사이트맵</a>
+    </aside>
+    <footer id="footer">
+        <ul>
+            <li><a href="#">이용안내</a></li>
+            <li><a href="#">저작권정책</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+        </ul>
+        <p>(10460)경기도 고양시 덕양구 고양시청로 10</p>
+        <address><strong>민원콜센터(시청):</strong>031-909-9000
+            <span><strong>수화상담(경기도):</strong>070-7947-3393</span></address>
+        <small>copyright&copy;2017 Goyancity All Rights Reserved</small>
+        <a href="#">유튜브로 이동</a>
+    </footer>
+</body>
+
+</html>
