@@ -124,21 +124,38 @@ $(document).ready(function(){
         e.preventDefault()
     })
 
+    // $("#bookWrap").slick({
+    //     dots: true,
+    //     infinite: true,
+    //     variableWidth: true
+    // });
+
     // 스와이퍼 적용
+    /*
     $("#cont1_2_slideWrap").on("mousedown",function(e){
         $("#bookWrap").data("clickX" , e.pageX - $("#bookWrap").position().left)
-        $("#bookWrap").on('mousemove', function(e){
+        $(document).on('mousemove', function(e){
             $("#bookWrap").css({
                 left: e.pageX - $("#bookWrap").data("clickX")+"px"
             })
-            console.log("마우스 이동")
-            console.log($("#bookWrap").data("clickX")+"px")
+            // console.log("마우스 이동")
+            // console.log($("#bookWrap").data("clickX")+"px")
         })
     });
-    $(document).on('mouseup', function(){
-        $("#bookWrap").off('mousemove');
+
+    $(document).on('mouseup', function(e){
+        $(document).off('mousemove');
         console.log("마우스 업")
+        console.log($("#bookWrap").css("left"))
+        if(parseInt($("#bookWrap").css("left"))<=(-950)){
+            $("#bookWrap").css("left")=(-950)+"px"
+        }
+        else if(parseInt($("#bookWrap").css("left"))>=0){
+            $("#bookWrap").css("left")="0px"
+
+        }
     })
+    */
 
     // main_book 클릭했을 때 이동안하게
     $("#main_book").on("click",function(e){

@@ -55,7 +55,7 @@ html,body {
     /* box-sizing: border-box; */
 }
 
-#header h1 a{
+#header h1 a {
     display: block;
     width: 235px;
     height: 53px;
@@ -861,9 +861,9 @@ html,body {
         display: none;
     }
     /* 내비 */
-    #gnb {
-        left: calc(50% - 400px);
-    }
+    #gnb { left: calc(50% - 400px); }
+    #gnb>ul>li>a { font-size: 18px; }
+    #gnb ul.snb li a { font-size: 14px; }
     #gnb ul.snb { width: 160px; margin-left: 0; }
     /* 메인 슬라이드 */
     #content1_1 { min-height: 300px; }
@@ -880,7 +880,7 @@ html,body {
     #content1_2Wrap h3 { width: 350px; font-size: 60px; top: 50px;right: 30px; }
     /* e-book */
     #main_book { width: 350px; height: 427px; margin-left: 30px; }
-    #cont1_2_slideWrap { width: 370px; bottom: 0px; right: 30px; } 
+    #cont1_2_slideWrap { width: 380px; bottom: 0px; right: 20px; } 
     /* 발간자료실 버튼 */
     #cont1_2btn { top:130px; right: 170px; }
     #cont1_2btn a { width: 70px; height: 70px;}
