@@ -15,6 +15,8 @@ $(document).ready(function(){
     // 전시관 리스트의 넓이
     let cont2_liWidth = $("#cont2slideWrap ul li").width()
     // let cont2_Num = 0
+    // 전시관 setInterval
+    let cont2_timer = setInterval(cont2_next,2000)
     // console.log(cont2_liWidth)
 
     //동영상(content4)
@@ -203,15 +205,19 @@ $(document).ready(function(){
         }
         else {
             // 다음
-            $("#cont2slideWrap ul:not(:animated)").stop().animate({
-                marginLeft : -(cont2_liWidth+40)*2
-            },function(){
-                $("#cont2slideWrap ul").append($("#cont2slideWrap ul li:eq(0)"))
-                $("#cont2slideWrap ul").css({marginLeft:-(cont2_liWidth+40)})
-            })
+            cont2_next()
         }
         e.preventDefault()
     })
+
+    function cont2_next() {
+        $("#cont2slideWrap ul:not(:animated)").stop().animate({
+            marginLeft : -(cont2_liWidth+40)*2
+        },function(){
+            $("#cont2slideWrap ul").append($("#cont2slideWrap ul li:eq(0)"))
+            $("#cont2slideWrap ul").css({marginLeft:-(cont2_liWidth+40)})
+        })
+    }
 
     // 문화체험(content3) a 이벤트 막음
     $("#cont3Wrap a").on("click",function(e){ e.preventDefault() })
