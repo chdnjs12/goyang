@@ -727,13 +727,13 @@ html,body {
     border-left: 1px solid #d6d6d6;
 } 
 
-#cont5_2 dl dt {
+#cont5_2 ul li {
     font-size: 16px;
     line-height: 30px;
     margin: 10px 0;
 }
 
-#cont5_2 dl dt>img {
+#cont5_2 ul li>img {
     margin-top: 20px;
 }
 
@@ -907,8 +907,8 @@ html,body {
     /* 게시판 */
     #content5 h3 { font-size: 20px; }
     /* 관리부서안내 */
-    #cont5_2 dl dt { margin: 5px 0 ; font-size: 14px;}
-    #cont5_2 dl dt>img { margin-top: 0px; }
+    #cont5_2 ul li { margin: 5px 0;}
+    #cont5_2 ul li>img { margin-top: 0px; }
 
     /* 푸터 */
     #footerBtn { right: 30px; bottom: 30px;}
