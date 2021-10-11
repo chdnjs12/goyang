@@ -95,7 +95,7 @@ $(document).ready(function(){
 
     function cont1_1next(){
         if(cont1_1btnIndex>=2) {
-            $("#cont1_1slideWrap ul").animate({
+            $("#cont1_1slideWrap ul:not(:animated)").stop().animate({
                 marginLeft: 0
             })
             cont1_1btnIndex = 0
@@ -103,7 +103,7 @@ $(document).ready(function(){
             $("#cont1_1btn li:eq(0)").children("a").addClass("on")
         }
         else {
-            $("#cont1_1slideWrap ul").animate({
+            $("#cont1_1slideWrap ul:not(:animated)").stop().animate({
                 marginLeft: "-="+cont1_wh+"px"
             })
             cont1_1btnIndex++
@@ -122,6 +122,22 @@ $(document).ready(function(){
         })
         // console.log($(this).index()+1)
         e.preventDefault()
+    })
+
+    // 스와이퍼 적용
+    $("#cont1_2_slideWrap").on("mousedown",function(e){
+        $("#bookWrap").data("clickX" , e.pageX - $("#bookWrap").position().left)
+        $("#bookWrap").on('mousemove', function(e){
+            $("#bookWrap").css({
+                left: e.pageX - $("#bookWrap").data("clickX")+"px"
+            })
+            console.log("마우스 이동")
+            console.log($("#bookWrap").data("clickX")+"px")
+        })
+    });
+    $(document).on('mouseup', function(){
+        $("#bookWrap").off('mousemove');
+        console.log("마우스 업")
     })
 
     // main_book 클릭했을 때 이동안하게
@@ -187,9 +203,9 @@ $(document).ready(function(){
 
     // 재미있는 동영상(content4)
     // 영상넣기
-    for(let i=1; i<=cont4_liNum; i++){
-        $("#cont4slideWrap ul").append("<li><a href='#' class='video'"+i+">영상"+i+"</a></li>")
-        $("#cont4slideWrap ul li").last().css({
+    for(let i=0; i<=cont4_liNum; i++){
+        // $("#cont4slideWrap ul").append("<li><a href='#' class='video'"+i+">영상"+i+"</a></li>")
+        $("#cont4slideWrap ul li:eq("+(i-1)+")").css({
             backgroundImage : "url(./images/cont4img"+i+".png)"
         })
     }

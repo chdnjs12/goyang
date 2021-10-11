@@ -33,7 +33,7 @@ address { font-style: normal; }
 html,body {
     position: relative;
     width: 100%;
-    min-width: 1200px;
+    /* min-width: 1200px; */
     /* overflow: hidden; */
 }
 
@@ -139,8 +139,8 @@ html,body {
 } */
 
 /* 메인_고양문화유산 */
-#content1 {
-}
+/* #content1 {
+} */
 
 #content1 {
     position: relative;
@@ -153,6 +153,7 @@ html,body {
     position: relative;
     margin-top: 90px;
     height: calc(100vh - 90px);
+    min-height: 500px;
     width: 100%;
     /* background: #92b47b; */
 }
@@ -266,7 +267,7 @@ html,body {
     position: relative;
     width: 1100px;
     margin: 0 auto;
-    padding-top: 100px; box-sizing: border-box;
+    padding-top: 5%; box-sizing: border-box;
 }
 
 #content1_2Wrap>h3 {
@@ -286,10 +287,11 @@ html,body {
 
 #cont1_2_slideWrap {
     position: absolute; bottom: 50px; right: 0;
-    width: 590px;
+    width: 570px;
     overflow: hidden;
 }
 #bookWrap {
+    position: relative;
     width: 1520px;
 }
 #bookWrap li {
@@ -678,7 +680,7 @@ html,body {
     height: 40vh;
     /* background-color: bisque; */
     padding-top: 5%;
-    min-height: 300px;
+    min-height: 350px;
     display: flex;
 }
 
@@ -844,6 +846,74 @@ html,body {
     display: block; width: 100%; height: 30px; line-height: 30px;
 }
 
+#footerWrap1 ul li a:hover { color: #3dc2ff; }
+
 #footerWrap2 { width: 100%; padding: 20px 0; }
 
+@media all and (max-width:1200px) {
+    body {
+        min-width: 800px;
+    }
+    #header {
+        min-width: 800px;
+    }
+    #header h1 {
+        display: none;
+    }
+    /* 내비 */
+    #gnb {
+        left: calc(50% - 400px);
+    }
+    #gnb ul.snb { width: 160px; margin-left: 0; }
+    /* 메인 슬라이드 */
+    #content1_1 { min-height: 300px; }
+    #cont1_1slideWrap>ul li a div.slideTxt p.title {
+        font-size: 65px;
+    }
+    #cont1_1slideWrap>ul li  div.slideTxt p:last-child {
+        font-size: 40px;
+    }
 
+    /* 발간자료실 */
+    #content1_2 { min-height: 600px;}
+    #content1_2Wrap { width: 800px; top: calc(50% - 300px);}
+    #content1_2Wrap h3 { width: 350px; font-size: 60px; top: 50px;right: 30px; }
+    /* e-book */
+    #main_book { width: 350px; height: 427px; margin-left: 30px; }
+    #cont1_2_slideWrap { width: 370px; bottom: 0px; right: 30px; } 
+    /* 발간자료실 버튼 */
+    #cont1_2btn { top:130px; right: 170px; }
+    #cont1_2btn a { width: 70px; height: 70px;}
+
+    /* 이색전시관 */
+    #cont2slideWrap ul { width: 400%; min-width: 800px; }
+    /* 이색전시관 버튼 */
+    #cont2_btn li:first-child { left: 15px; }
+    #cont2_btn li:last-child { right: 15px; }
+
+    /* 문화체험 */
+    #content3 { min-height: 700px; }
+    #content3 h3 { top:100px; left: calc(50% - 110px); }
+    #cont3img { display: none; }
+    #cont3Wrap { width: 800px; left: calc(50% - 400px); }
+
+    /* more */
+    #cont3Wrap>a { right: 30px; }
+    /* 문화체험 공지사항 */
+    #cont3_notice { padding-left: 150px; }
+
+    /* content5 */
+    #content5 { height: 35vh; }
+    /* 게시판 */
+    #content5 h3 { font-size: 20px; }
+    /* 관리부서안내 */
+    #cont5_2 dl dt { margin: 5px 0 ; font-size: 14px;}
+    #cont5_2 dl dt>img { margin-top: 0px; }
+
+    /* 푸터 */
+    #footerBtn { right: 30px; bottom: 30px;}
+}
+
+@media all and (max-width:800px) {
+    
+}
