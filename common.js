@@ -2,22 +2,25 @@
 $(document).ready(function(){
 
     // 메인슬라이더(content1_1)
-    let cont1_wh = $("#cont1_1slideWrap").width()
     // #cont1_1slideWrap의 넓이를 저장, 100%
-    let cont1_1btnIndex = 0
+    let cont1_wh = $("#cont1_1slideWrap").width()
     // #cont1_1btn의 인덱스 저장
-    let cont1_1timer = setInterval(cont1_1next,2000)
+    let cont1_1btnIndex = 0
     // setInterval
+    let cont1_1timer = setInterval(cont1_1next,2000)
     
     // 이색전시관(content2)
-    let cont2_liWidth = $("#cont2slideWrap ul li").width()
     // 전시관 리스트의 넓이
+    let cont2_liWidth = $("#cont2slideWrap ul li").width()
+    // let cont2_Num = 0
     // console.log(cont2_liWidth)
 
     //동영상(content4)
     let cont4_liNum = 15
     // 리스트 개수
     let cont4_Num = 0
+    // 동영상 버튼 인덱스
+    let cont4_btnIndex = 0
 
 
     window.addEventListener("resize",function(){
@@ -27,6 +30,7 @@ $(document).ready(function(){
         })
         cont2_liWidth = $("#cont2slideWrap ul li").width()
         // console.log(cont2_liWidth)
+        $("#cont2slideWrap ul").css({marginLeft:-(cont2_liWidth+40)})
     })
 
     // cont1_btn 클릭이벤트
@@ -39,11 +43,15 @@ $(document).ready(function(){
             marginLeft: -cont1_wh*$(this).index()
         },function(){
             cont1_1timer = setInterval(cont1_1next,2000)
+            // 버튼 on
+            // $("#cont1_1btn li").not(":eq("+cont1_1btnIndex+")").children("a").removeClass("on")
+            // $("#cont1_1btn li:eq("+cont1_1btnIndex+")").children("a").addClass("on")
         })
 
         // 버튼 on
-        $("#cont1_1btn li").not($(this)).children("a").removeClass("on")
-        $(this).children("a").addClass("on")
+        $("#cont1_1btn li").not(":eq("+cont1_1btnIndex+")").children("a").removeClass("on")
+        $("#cont1_1btn li:eq("+cont1_1btnIndex+")").children("a").addClass("on")
+
 
         e.preventDefault()
     })
@@ -61,7 +69,7 @@ $(document).ready(function(){
         }
         else {
             $("#cont1_1slideWrap ul").animate({
-                marginLeft: "-="+cont1_wh+"px"
+                marginLeft: "-"+cont1_wh*2+"px"
             })
             cont1_1btnIndex++
             $("#cont1_1btn li").not(":eq("+cont1_1btnIndex+")").children("a").removeClass("on")
@@ -90,12 +98,12 @@ $(document).ready(function(){
     $("#cont1_2btn a").on("click",function(e){
         if($(this).attr("class")=="cont1_prev"){
             // console.log("이전")
-            $("#cont1_2_slideWrap").animate({
+            $("#cont1_2_slideWrap:not(:animated)").stop().animate({
                 scrollLeft : "-=190px"
             })
         }  
         else {
-            $("#cont1_2_slideWrap").animate({
+            $("#cont1_2_slideWrap:not(:animated)").stop().animate({
                 scrollLeft : "+=190px"
             })
         }
@@ -109,10 +117,16 @@ $(document).ready(function(){
     $("#cont2slideWrap ul").css({marginLeft:-(cont2_liWidth+40)})
     // 순환구조 정렬
 
+    // 이색전시관 a이벤트 막음
+    $("#cont2slideWrap ul li").on("click",function(e){
+        e.preventDefault()
+    })
+
+
     $("#cont2_btn li").on("click",function(e){
         if($(this).children('a').attr('class')=="cont2_prev"){
             // 이전
-            $("#cont2slideWrap ul").animate({
+            $("#cont2slideWrap ul:not(:animated)").stop().animate({
                 marginLeft : 0
             },function(){
                 $("#cont2slideWrap ul").prepend($("#cont2slideWrap ul li").last())
@@ -121,16 +135,18 @@ $(document).ready(function(){
         }
         else {
             // 다음
-            $("#cont2slideWrap ul").animate({
+            $("#cont2slideWrap ul:not(:animated)").stop().animate({
                 marginLeft : -(cont2_liWidth+40)*2
             },function(){
-                cont2Num++
                 $("#cont2slideWrap ul").append($("#cont2slideWrap ul li:eq(0)"))
                 $("#cont2slideWrap ul").css({marginLeft:-(cont2_liWidth+40)})
             })
         }
         e.preventDefault()
     })
+
+    // 문화체험 a 이벤트 막음
+    $("#cont3Wrap a").on("click",function(e){ e.preventDefault() })
 
     // 영상넣기
     for(let i=1; i<=cont4_liNum; i++){
@@ -142,9 +158,40 @@ $(document).ready(function(){
 
     $("#content4 ul").css({width : cont4_liNum/5*100+"%"})
 
-    // 영상
-    $("#cont4_btn1").on("click",function(e){
-        
+    // 영상버튼
+    // 숫자버튼
+    $("#cont4_btn1 a").on("click",function(e){
+        cont4_btnIndex = $(this).index()
+        console.log(cont4_btnIndex)
+        console.log($("#cont4slideWrap").width())
+        $("#cont4slideWrap:not(:animated)").stop().animate({
+            scrollLeft : $("#cont4slideWrap").width()*(cont4_btnIndex)+"px"
+        },function(){
+
+        })
+        e.preventDefault()
+
+        // 버튼 여러번 눌러도 왔다갔다 안하게 하려면 어떡할지 고민
+        $("#cont4_btn1 a").not($(this)).removeClass("cont4_on")
+        $("#cont4_btn1 a:eq("+cont4_btnIndex+")").addClass("cont4_on")
+    })
+
+    // 이전,다음
+    $("#cont4_btn2 a").on("click",function(e){
+        if($(this).attr("class")=="cont5_prev") {
+            console.log("이전")
+            if(cont4_btnIndex>0) {
+                cont4_btnIndex--
+            }
+        }
+        else {
+            console.log("다음")
+            if(cont4_btnIndex<2){
+                cont4_btnIndex++
+
+            }
+
+        }
         e.preventDefault()
     })
 })
