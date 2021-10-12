@@ -93,16 +93,16 @@
                     </ul>
                 </div>
                 <ul id="cont1_1btn">
-                    <li><a href="#" class="on">btn1</a></li>
-                    <li><a href="#">btn2</a></li>
-                    <li><a href="#">btn3</a></li>
+                    <li><a href="#" class="on">첫번째 페이지로 이동</a></li>
+                    <li><a href="#">두번째 페이지로 이동</a></li>
+                    <li><a href="#">세번째 페이지로 이동</a></li>
                 </ul>
             </section>
 
             <section id="content1_2">
                 <div id="content1_2Wrap">
                     <h3>발간 자료실</h3>
-                    <a href="#" id="main_book">main_book</a>
+                    <a href="#" id="main_book">main_book_역사가 담긴 고양 문화유산</a>
                     <div id="cont1_2_slideWrap">
                         <ul id="bookWrap" class="variable slider">
                             <li><a href="#" class="book1">역사가 담긴 고양 북한산 답사길</a></li>
@@ -233,9 +233,9 @@
             <h3>문화체험</h3>
             <div id="cont3Wrap">
                 <ul id="cont3img">
-                    <li><a href="#">메인행사1</a></li>
-                    <li><a href="#">메인행사2</a></li>
-                    <li><a href="#">메인행사3</a></li>
+                    <li><a href="#">메인행사1_행주산성 해맞이 행사</a></li>
+                    <li><a href="#">메인행사2_항일음악회</a></li>
+                    <li><a href="#">메인행사3_2019년 생생문화제</a></li>
                 </ul>
 
                 <ul id="cont3_notice">
@@ -374,13 +374,41 @@
 
     <script src="slick.min.js"></script>
     <script>
-  
+        let num1 = 1;
         $(".variable").slick({
           dots: true,
           infinite: true,
           variableWidth: true
         });
-  
+        $(document).ready(function(){
+            if($(window).width()<=1183) {
+                $(".cont2_slide").css({width: 800})
+                $(".slick-track").css({width: 800})
+            }
+        })
+        window.addEventListener("resize",function(){
+            console.log($(window).width())
+            if($(window).width()<=1183) {
+                $(".cont2_slide").css({width: 800})
+                $(".slick-track").css({width: 800})
+            }
+            else {
+                $(".cont2_slide").css({width: 100+"%"})
+                $(".slick-track").css({width: 100+"%"})
+            }
+        })
+        
+        /*
+        $("#content1_2 .slick-next").on("click",function(){
+            num1++
+            // console.log(num1)
+        })
+        $("#content1_2 .slick-prev").on("click",function(){
+            num1--
+            // console.log(num1)
+        })
+        */
+       
   </script>
 </body>
 

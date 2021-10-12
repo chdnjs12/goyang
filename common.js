@@ -63,9 +63,9 @@ $(document).ready(function(){
         $("#cont1_1slideWrap ul").css({
             marginLeft: -cont1_wh*cont1_1btnIndex
         })
-        cont2_liWidth = $("#cont2slideWrap ul li").width()
+        // cont2_liWidth = $("#cont2slideWrap ul li").width()
         // console.log(cont2_liWidth)
-        $("#cont2slideWrap ul").css({marginLeft:-(cont2_liWidth+40)})
+        // $("#cont2slideWrap ul").css({marginLeft:-(cont2_liWidth+40)})
     })
 
     // cont1_btn 클릭이벤트
@@ -190,6 +190,7 @@ $(document).ready(function(){
         e.preventDefault()
     })
 
+    /*
     $("#cont2_btn li").on("click",function(e){
         if($(this).children('a').attr('class')=="cont2_prev"){
             // 이전
@@ -206,6 +207,7 @@ $(document).ready(function(){
         }
         e.preventDefault()
     })
+    */
 
     function cont2_next() {
         $("#cont2slideWrap ul:not(:animated)").stop().animate({
