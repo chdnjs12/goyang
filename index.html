@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     <script src="jquery-3.6.0.min.js"></script>
-    <!-- <script src="slick.min.js"></script> -->
+    <!-- <script src="jquery-migrate-1.4.1.min.js"></script> -->
     <script src="common.js"></script>
     <link href="common.css" rel="stylesheet">
+    <link href="slick.css" rel="stylesheet">
+    <!-- <link href="slick-master/slick-theme.css" rel="stylesheet"> -->
     <title>고양사이버역사박물관</title>
 </head>
 
@@ -102,22 +104,22 @@
                     <h3>발간 자료실</h3>
                     <a href="#" id="main_book">main_book</a>
                     <div id="cont1_2_slideWrap">
-                        <ul id="bookWrap">
-                            <li><a href="#">역사가 담긴 고양 북한산 답사길</a></li>
-                            <li><a href="#">고양의 문화유산</a></li>
-                            <li><a href="#">가와지 볍씨 자료실</a></li>
-                            <li><a href="#">고양의 역사와 인물</a></li>
-                            <li><a href="#">고양의 지명이야기</a></li>
-                            <li><a href="#">사진으로 보는 고양의 문화유산</a></li>
-                            <li><a href="#">우리 마을 고양의 문화재 이야기</a></li>
-                            <li><a href="#">길- 고양 문화유산 이야기</a></li>
+                        <ul id="bookWrap" class="variable slider">
+                            <li><a href="#" class="book1">역사가 담긴 고양 북한산 답사길</a></li>
+                            <li><a href="#" class="book2">고양의 문화유산</a></li>
+                            <li><a href="#" class="book3">가와지 볍씨 자료실</a></li>
+                            <li><a href="#" class="book4">고양의 역사와 인물</a></li>
+                            <li><a href="#" class="book5">고양의 지명이야기</a></li>
+                            <li><a href="#" class="book6">사진으로 보는 고양의 문화유산</a></li>
+                            <li><a href="#" class="book7">우리 마을 고양의 문화재 이야기</a></li>
+                            <li><a href="#" class="book8">길- 고양 문화유산 이야기</a></li>
                             <!-- 나중에 늘리기... -->
                         </ul>
                     </div>
-                    <div id="cont1_2btn">
+                    <!-- <div id="cont1_2btn">
                         <a href="#" class="cont1_prev">이전</a>
                         <a href="#" class="cont1_next">다음</a>
-                    </div>
+                    </div> -->
                 </div>
             </section>
         </section>
@@ -126,87 +128,91 @@
             <h2 class="hidden">한번가보자</h2>
             <h3>이색전시관</h3>
             <div id="cont2slideWrap">
-                <ul>
-                    <li class="slide1">
-                        <div>
-                            <a href="#">
-                                <p><span>고양 아람미술관</span><br>
-                                    고양시 최대 규모 미술전시관인 아람미술관은 이동형 벽면을 도입한 1,300㎡ 크기의 최첨단 공간입니다.
-                                </p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="slide2">
-                        <div>
-                            <a href="#">
-                                <p><span>갤러리 '가온'</span><br>
-                                    일산동구청 유휴 공간인 2층을 활용해 운영중인 "갤러리 가온"은 2012년 7월 고양시 관공서 최초로 전시를 시작했으며, 일산동구청을 시작으로 고양시청과 덕양구청이 공공 갤러리관을 운영중에 있습니다. 
-                                </p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="slide3">
-                        <div>
-                            <a href="#">
-                                <p><span>갤러리 '꿈'</span><br>
-                                    덕양구청 꿈 갤러리는 구청 청사를 방문한 고양시민 및 직원들에게 그림, 글씨, 사진 등의 다채로운 볼거리를 제공함으로써 바쁜 일상 속의 여유를 선사해주는 문화·예술공간입니다. 
-                                </p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="slide4">
-                        <div>
-                            <a href="#">
-                                <p><span>아쿠아플라넷</span><br>
-                                    '아쿠아'는 바다의 웅장함, 그리고 해양과학과 인간의 만남을 뜻하며, ‘플라넷’은 여기서만 느낄 수 있는 첨단과학의 컨셉트를 관람객이 직접 우주행성을 탐험하듯 즐기게 한다는 의미를 가지고 있습니다.
-                                </p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="slide5">
-                        <div>
-                            <a href="#">
-                                <p><span>테마동물원 쥬쥬</span><br>
-                                    테마동물원 쥬쥬는 현재 150여 종의 다양한 동물들을
-                                    만나볼 수 있는 생태공원으로 가족종합휴양시설로서의 발돋움을 하고 있습니다.
-                                </p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="slide6">
-                        <div>
-                            <a href="#">
-                                <p><span>항공우주박물관</span><br>
-                                    항공우주박물관은 유물 전시를 위주로 하는 기존 박물관의 고루한 개념에서 벗어나, 과학적 이해와 간접 체험을 위주로 전시 내용을 구성하였습니다.
-                                </p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="slide7">
-                        <div>
-                            <a href="#">
-                                <p><span>증권박물관</span><br>
-                                    증권박물관은 스위스 증권박물관에 이어 세계에서 두 번째로 개관한 국내 유일의 증권 전문 박물관입니다.
-                                </p>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="slide8">
-                        <div>
-                            <a href="#">
-                                <p><span>유진민속박물관</span><br>
-                                    유진민속박물관은 2009년에 개관하였으며, 전통문화관련 민속품 전시와 체험공간이 마련되어 있습니다.
-                                </p>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
+                <div id="cont2ulWrap" class="variable slider">
+                    <ul class="cont2_slide">
+                        <li class="slide1">
+                            <div>
+                                <a href="#">
+                                    <p><span>고양 아람미술관</span><br>
+                                        고양시 최대 규모 미술전시관인 아람미술관은 이동형 벽면을 도입한 1,300㎡ 크기의 최첨단 공간입니다.
+                                    </p>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="slide2">
+                            <div>
+                                <a href="#">
+                                    <p><span>갤러리 '가온'</span><br>
+                                        일산동구청 유휴 공간인 2층을 활용해 운영중인 "갤러리 가온"은 2012년 7월 고양시 관공서 최초로 전시를 시작했으며, 일산동구청을 시작으로 고양시청과 덕양구청이 공공 갤러리관을 운영중에 있습니다. 
+                                    </p>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="slide3">
+                            <div>
+                                <a href="#">
+                                    <p><span>갤러리 '꿈'</span><br>
+                                        덕양구청 꿈 갤러리는 구청 청사를 방문한 고양시민 및 직원들에게 그림, 글씨, 사진 등의 다채로운 볼거리를 제공함으로써 바쁜 일상 속의 여유를 선사해주는 문화·예술공간입니다. 
+                                    </p>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="slide4">
+                            <div>
+                                <a href="#">
+                                    <p><span>아쿠아플라넷</span><br>
+                                        '아쿠아'는 바다의 웅장함, 그리고 해양과학과 인간의 만남을 뜻하며, ‘플라넷’은 여기서만 느낄 수 있는 첨단과학의 컨셉트를 관람객이 직접 우주행성을 탐험하듯 즐기게 한다는 의미를 가지고 있습니다.
+                                    </p>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="cont2_slide">
+                        <li class="slide5">
+                            <div>
+                                <a href="#">
+                                    <p><span>테마동물원 쥬쥬</span><br>
+                                        테마동물원 쥬쥬는 현재 150여 종의 다양한 동물들을
+                                        만나볼 수 있는 생태공원으로 가족종합휴양시설로서의 발돋움을 하고 있습니다.
+                                    </p>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="slide6">
+                            <div>
+                                <a href="#">
+                                    <p><span>항공우주박물관</span><br>
+                                        항공우주박물관은 유물 전시를 위주로 하는 기존 박물관의 고루한 개념에서 벗어나, 과학적 이해와 간접 체험을 위주로 전시 내용을 구성하였습니다.
+                                    </p>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="slide7">
+                            <div>
+                                <a href="#">
+                                    <p><span>증권박물관</span><br>
+                                        증권박물관은 스위스 증권박물관에 이어 세계에서 두 번째로 개관한 국내 유일의 증권 전문 박물관입니다.
+                                    </p>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="slide8">
+                            <div>
+                                <a href="#">
+                                    <p><span>유진민속박물관</span><br>
+                                        유진민속박물관은 2009년에 개관하였으며, 전통문화관련 민속품 전시와 체험공간이 마련되어 있습니다.
+                                    </p>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <!-- 사진에 호버했을 때 사진 커지는 애니메이션 -->
-            <ul id="cont2_btn">
+            <!-- <ul id="cont2_btn">
                 <li><a href="#" class="cont2_prev">이전</a></li>
                 <li><a href="#" class="cont2_next">다음</a></li>
-            </ul>
+            </ul> -->
         </section>
 
         <!-- <p id="banner">
@@ -250,19 +256,22 @@
                 <h2>5천년 역사</h2>
                 <h3>재미있는 동영상</h3>
             </hgroup>
-            <div id="cont4slideWrap">
-                <ul>
-                    <!-- 제이쿼리에서 추가 -->
+            <div id="cont4slideWrap" class="variable slider">
+                <ul class="slide">
                     <li><a href='#' class='video1'>북한산</a></li>
                     <li><a href='#' class='video2'>고양 북한산성 답사기</a></li>
                     <li><a href='#' class='video3'>5천년 역사의 씨앗 고양 가와지볍씨</a></li>
                     <li><a href='#' class='video4'>고양 문화유산이야기4 - 옛길에서 만나는 문화유산2</a></li>
                     <li><a href='#' class='video5'>고양북한산의 아름다움을 담다</a></li>
+                </ul>
+                <ul class="slide">
                     <li><a href='#' class='video6'>고양 문화유산이야기3 - 고봉산기슭, 문화유산을 찾다2</a></li>
                     <li><a href='#' class='video7'>고양 문화유산이야기2 - 한강, 고양의 역사와 함께 흐르다2</a></li>
                     <li><a href='#' class='video8'>고양 문화유산이야기1 - 북한산 문화유산에 오르다2</a></li>
                     <li><a href='#' class='video9'>고양 문화유산이야기4 - 옛길에서 만나는 문화유산1</a></li>
                     <li><a href='#' class='video10'>고양 문화유산이야기3 - 고봉산기슭, 문화유산을 찾다1</a></li>
+                </ul>
+                <ul class="slide">
                     <li><a href='#' class='video11'>고양 문화유산이야기2 - 한강, 고양의 역사와 함께 흐르다1</a></li>
                     <li><a href='#' class='video12'>고양 문화유산이야기1 - 북한산 문화유산에 오르다1</a></li>
                     <li><a href='#' class='video13'>고양의 독립운동 이야기</a></li>
@@ -271,7 +280,7 @@
                 </ul>
             </div>
 
-            <div id="cont4_btn1">
+            <!-- <div id="cont4_btn1">
                 <a href="#" class="cont4_on">1</a>
                 <a href="#">2</a>
                 <a href="#">3</a>
@@ -279,7 +288,7 @@
             <div id="cont4_btn2">
                 <a href="#" class="cont5_prev">prev</a>
                 <a href="#" class="cont5_next">next</a>
-            </div>
+            </div> -->
         </section>
 
         <section id="content5">
@@ -362,6 +371,17 @@
             <li><a href="#">트위터로 이동</a></li>
         </ul>
     </footer>
+
+    <script src="slick.min.js"></script>
+    <script>
+  
+        $(".variable").slick({
+          dots: true,
+          infinite: true,
+          variableWidth: true
+        });
+  
+  </script>
 </body>
 
 </html>

@@ -1,7 +1,8 @@
 $(document).ready(function(){
     // 버튼 state
     let cont1_1_state = 0
-    let cont4_state = 0
+    let cont4_state = 0 //숫자
+    let cont4_state2 = 0 //좌우
 
     // 메인슬라이더(content1_1)
     // #cont1_1slideWrap의 넓이를 저장, 100%
@@ -16,7 +17,7 @@ $(document).ready(function(){
     let cont2_liWidth = $("#cont2slideWrap ul li").width()
     // let cont2_Num = 0
     // 전시관 setInterval
-    let cont2_timer = setInterval(cont2_next,2000)
+    // let cont2_timer = setInterval(cont2_next,2000)
     // console.log(cont2_liWidth)
 
     //동영상(content4)
@@ -126,12 +127,6 @@ $(document).ready(function(){
         e.preventDefault()
     })
 
-    // $("#bookWrap").slick({
-    //     dots: true,
-    //     infinite: true,
-    //     variableWidth: true
-    // });
-
     // 스와이퍼 적용
     /*
     $("#cont1_2_slideWrap").on("mousedown",function(e){
@@ -165,6 +160,7 @@ $(document).ready(function(){
     })
 
     // 버튼
+    /*
     $("#cont1_2btn a").on("click",function(e){
         if($(this).attr("class")=="cont1_prev"){
             // console.log("이전")
@@ -179,19 +175,20 @@ $(document).ready(function(){
         }
         e.preventDefault()
     })
-
+    */
 
     // 이색전시관(content2)
     // 순환구조
+    /*
     $("#cont2slideWrap ul").prepend($("#cont2slideWrap ul li").last())
     $("#cont2slideWrap ul").css({marginLeft:-(cont2_liWidth+40)})
+    */
     // 순환구조 정렬
 
     // 이색전시관 a이벤트 막음
     $("#cont2slideWrap ul li").on("click",function(e){
         e.preventDefault()
     })
-
 
     $("#cont2_btn li").on("click",function(e){
         if($(this).children('a').attr('class')=="cont2_prev"){
@@ -226,20 +223,20 @@ $(document).ready(function(){
 
     // 재미있는 동영상(content4)
     // 영상넣기
-    for(let i=0; i<=cont4_liNum; i++){
+    for(let i=1; i<=cont4_liNum; i++){
         // $("#cont4slideWrap ul").append("<li><a href='#' class='video'"+i+">영상"+i+"</a></li>")
-        $("#cont4slideWrap ul li:eq("+(i-1)+")").css({
+        $("#cont4slideWrap ul li a.video"+i).parent().css({
             backgroundImage : "url(./images/cont4img"+i+".png)"
         })
     }
-
-    $("#content4 ul").css({width : cont4_liNum/5*100+"%"})
 
     // 동영상 a클릭 이벤트 막아놓음
     $("#cont4slideWrap a").on("click",function(e){
         e.preventDefault()
     })
-
+    
+    /*
+    $("#content4 ul").css({width : cont4_liNum/5*100+"%"})
     // 영상버튼
     // 숫자버튼
     $("#cont4_btn1 a").on("click",function(e){
@@ -255,9 +252,9 @@ $(document).ready(function(){
 
         // 버튼 여러번 눌러도 왔다갔다 안하게 하려면 어떡할지 고민
         if(cont4_state==0){
+            cont4_state = 1
             $("#cont4_btn1 a").not($(this)).removeClass("cont4_on")
             $("#cont4_btn1 a:eq("+cont4_btnIndex+")").addClass("cont4_on")
-            cont4_state = 1
         }
 
     })
@@ -266,29 +263,35 @@ $(document).ready(function(){
     $("#cont4_btn2 a").on("click",function(e){
         if($(this).attr("class")=="cont5_prev") {
             // console.log("이전")
-            if(cont4_btnIndex>0) {
+            if(cont4_btnIndex>0&&cont4_state2 == 0) {
+                cont4_state2 = 1
                 cont4_btnIndex--
+                console.log("이전"+cont4_btnIndex)
                 $("#cont4slideWrap:not(:animated)").stop().animate({
                     scrollLeft : $("#cont4slideWrap").width()*(cont4_btnIndex)+"px"
-                })
+                },function(){ cont4_state2 = 0 })
+    
                 $("#cont4_btn1 a").not($(this)).removeClass("cont4_on")
                 $("#cont4_btn1 a:eq("+cont4_btnIndex+")").addClass("cont4_on")
             }
         }
         else {
             // console.log("다음")
-            if(cont4_btnIndex<2){
+            if(cont4_btnIndex<2&&cont4_state2==0){
                 cont4_btnIndex++
+                console.log("다음"+cont4_btnIndex)
                 $("#cont4slideWrap:not(:animated)").stop().animate({
                     scrollLeft : $("#cont4slideWrap").width()*(cont4_btnIndex)+"px"
-                })
+                },function(){ cont4_state2 = 0 })
+                cont4_state2 = 1
                 $("#cont4_btn1 a").not($(this)).removeClass("cont4_on")
                 $("#cont4_btn1 a:eq("+cont4_btnIndex+")").addClass("cont4_on")
             }
-
         }
+
         e.preventDefault()
     })
+    */
 
     // 주요게시판(content5) 클릭이벤트 막음
     $("#content5 a").on("click",function(e){ e.preventDefault() })
