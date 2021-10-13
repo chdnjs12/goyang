@@ -1133,7 +1133,7 @@ html,body {
     #content2 { height: 1550px; }
     #content2 h3 { padding-bottom: 0; }
     #cont2slideWrap { width: 400px; height: 1280px; 
-        padding-top: 90px; overflow: scroll; }
+        padding-top: 90px; }
     #cont2ulWrap { width: 380px; margin: 0 auto; }
     #cont2ulWrap ul.cont2_slide { width: 380px; }
     #cont2ulWrap ul.cont2_slide li { 
