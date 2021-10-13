@@ -63,7 +63,7 @@ html,body {
 }
 
 #header>a {
-    position: fixed; top:10px; left: 10px;
+    position: fixed; top:20px; left: 20px;
     display: block; width:40px; height: 40px; line-height: 40px;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 15px;
@@ -87,6 +87,7 @@ html,body {
 #gnb>ul>li {
     float: left;
     width: 160px;
+    background-color: #fff;
 }
 
 #gnb>ul>li>a {
@@ -467,7 +468,7 @@ html,body {
 
 #cont2ulWrap ul.cont2_slide li a p {
     position: relative; font-size: 7px;
-    top: calc(50% - 30px);
+    top: calc(50% - 70px);
     width: 45%; margin: 0 auto;
     color: #fff;
     opacity: 0; transition: 0.5s;
@@ -551,10 +552,9 @@ html,body {
     padding: 5px 45px; font-size: 14px;
     background-color: #2f2e22;
     color: #9b9b94;
-    border: 1px solid #9b9b94; transition: 0.3s;
-}
+    border: 1px solid #9b9b94; 
 
-#banner a:hover { background-color: #000; color: #fff; }
+}
 
 /* 문화체험(content3) */
 #content3 {
@@ -821,12 +821,12 @@ html,body {
 
 /* content5 */
 #content5 {
-    display: flex;
     width: 80%; margin: 0 auto;
     height: 40vh;
     /* background-color: bisque; */
     padding-top: 5%;
     min-height: 350px;
+    display: flex;
 }
 
 #content5 h3 {
@@ -979,10 +979,8 @@ html,body {
 #footerBtn li:nth-child(2) a { background-image: url(./images/facebook.png); }
 #footerBtn li:last-child a { background-image: url(./images/twitter.png); }
 
-#footerWrap1 { width: 100%; 
+#footerWrap1 {width: 100%; 
     border: 1px solid #ccc; box-sizing: border-box;
-    border-left: none;
-    border-right: none;
     padding: 10px 0;}
 #footerWrap1 ul { overflow: hidden; width: 50%; margin: 0 auto; }
 #footerWrap1 ul li {
@@ -1081,121 +1079,22 @@ html,body {
 }
 
 @media all and (max-width:800px) {
-    body {
-        min-width: 400px;
-    }
     /* 헤더 */
     #header { height: 0px; }
-    #header>a { display: block; transition: 0.5s; }
+    #header>a { display: block; }
     #header>a:hover { 
         background: rgba(255, 255, 255, 0.5);
         color : #000;
     }
     /* 내비 */
     #gnb { width: 100px; 
-        top: 80px; left: -160px;
+        /* display: none; */
+        top: 80px;
      }
+    #gnb>ul { width: 100% }
     #gnb>ul>li { float: none; }
-    #gnb>ul>li>a { font-size: 16px; height: 50px; line-height: 50px; font-weight: normal;
-        background: rgba(0, 0, 0, 0.5);
-        color : #fff;
-    }
-    #gnb>ul>li:hover>a {
-        background: #000; color : #fff; }
+    #gnb>ul>li>a { font-size: 16px; height: 50px; line-height: 50px; }
 
-    #gnb ul.snb {
-        background: rgba(255, 255, 255, 0.5);
-        border-radius: 0;
-    }
-
-    #gnb ul.snb li:hover a { font-weight: 900; }
-    #gnb ul.snb li:hover>a::before { width: 0; }
     /* 메인 슬라이드 */
-    #content1_1 { margin-top: 0; height: 100vh; min-height: 400px; }
-    #cont1_1slideWrap>ul li a div.slideTxt p.title {
-        font-size: 50px;
-    }
-    #cont1_1slideWrap>ul li  div.slideTxt p:last-child {
-        font-size: 30px;
-    }
-
-    /* 발간자료실 */
-    #content1_2Wrap { width: 400px; }
-    #content1_2Wrap>h3 { font-size: 50px; right:25px; }
-    #main_book { display: none; }
-    #cont1_2_slideWrap { position: relative; right: 0; bottom: -100px; }
-    #content1_2 .slick-prev,
-    /* #content1_2 .slick-next { width: 50px; height: 50px; } */
-    #content1_2 .slick-prev { left: 100px;}
-    #content1_2 .slick-next { left: 200px;}
-    
-    /* 이색전시관 */
-    #content2 { height: 1550px; }
-    #content2 h3 { padding-bottom: 0; }
-    #cont2slideWrap { width: 400px; height: 1280px; 
-        padding-top: 90px; }
-    #cont2ulWrap { width: 380px; margin: 0 auto; }
-    #cont2ulWrap ul.cont2_slide { width: 380px; }
-    #cont2ulWrap ul.cont2_slide li { 
-        float: none; 
-        display: block;
-        width: 360px;
-        height: 280px;
-        margin: 25px 10px;
-    }
-    #cont2ulWrap ul.cont2_slide li a { padding-top: 10px; }
-    /* 이색전시관 버튼 */ 
-    #content2 .slick-prev,
-    #content2 .slick-next { top:-60px; width: 60px; height: 60px; }
-
-    #content2 .slick-prev { left: 100px; }
-    #content2 .slick-next { right: 100px; }
-
-    /* 배너 */
-    #banner { height: 200px; }
-    #banner p { margin: 5px; font-weight: lighter; }
-    #banner p:first-child { display: none; }
-    #banner p:nth-child(2) { font-size: 40px; }
-
-    /* 문화체험 */
-    #cont3Wrap { width: 400px; left: calc(50% - 200px); }
-    #cont3Wrap>a { bottom: 0; }
-    #cont3_notice { width: 400px; font-family: sans-serif,serif;
-        padding-left: 0px;
-    }
-    #cont3_notice li { width: 350px; }
-    #cont3_notice li a {
-        font-size: 16px;
-        font-weight: bold;
-    }
-    #cont3_notice li a>span{
-        font-size: 20px; color: #00a2ff; font-weight: bold; font-family: "twaysky", serif;
-    }
-    /* 재미있는 동영상 */
-    #content4 { height: 500px;}
-    #cont4slideWrap { width: 380px; padding-top: 0; }
-    /* #cont4slideWrap ul.slide li {
-        float: none;
-        width: 170px;
-        height: 70px;
-        margin-top: 10px;
-    } */
-
-    #content4 .slick-dots li { display: none; }
-    #content4 .slick-prev,
-    #content4 .slick-next { width: 0px; height: 0px; }
-
-    /* 게시판(content5) */
-    #content5 { width: 400px; display: block; height: 200px; min-height: 200px; }
-    #content5 h3 { font-size: 16px; line-height: 50px; text-align: center; }
-    #cont5_1 { width: 100%; margin: 0 5px;}
-    #cont5_1 div.cont5_1Wrap>a { font-size: 12px; }
-    #cont5_1 ul li { margin: 0; }
-    #cont5_1 ul li a { font-size: 12px; }
-    #cont5_2 { display: none;}
-
-    /* 푸터 */
-    #footer { font-size: 12px;}
-    #footerBtn { top: -40px;}
-    #footerWrap1 ul { width: 400px; }
+    #content1_1 { margin-top: 0px; height: 100vh; }
 }

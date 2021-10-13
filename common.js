@@ -4,9 +4,6 @@ $(document).ready(function(){
     let cont4_state = 0 //숫자
     let cont4_state2 = 0 //좌우
 
-    // header버튼 state
-    let Hstate = 0
-
     // 메인슬라이더(content1_1)
     // #cont1_1slideWrap의 넓이를 저장, 100%
     let cont1_wh = $("#cont1_1slideWrap").width()
@@ -27,20 +24,6 @@ $(document).ready(function(){
     let cont4_liNum = 15
     // 동영상 버튼 인덱스
     let cont4_btnIndex = 0
-
-    $("#header>a").on("click",function(e){
-        if(Hstate==0){
-            console.log(Hstate)
-            Hstate = 1
-            $("#gnb").animate({left : 0},function(){Hstate = 2})
-        }
-        else if(Hstate==2){
-            console.log(Hstate)
-            Hstate = 1
-            $("#gnb").animate({left : -160},function(){Hstate = 0})
-        }
-        e.preventDefault()
-    })
 
     // 내비게이션
     $("#gnb>ul>li").on("mouseenter",function(){

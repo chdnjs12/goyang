@@ -382,28 +382,14 @@
           variableWidth: true
         });
         $(document).ready(function(){
-            // 동영상 플러그인 끄기
-            if($(window).width()<=783) {
-                
-                $("#cont4slideWrap").removeClass("variable")
-            }
-            if($(window).width()<=1183 && $(window).width()>=783) {
+            if($(window).width()<=1183) {
                 $(".cont2_slide").css({width: 800})
                 $("#content2 .slick-track").css({width: 800})
             }
-            else {
-                $(".cont2_slide").css({width: 100+"%"})
-                $("#content2 .slick-track").css({width: 100+"%"})
-            }
         })
         window.addEventListener("resize",function(){
-            // 동영상 플러그인 끄기
-            if($(window).width()<=783) {
-                $("#cont4slideWrap").removeClass("variable")
-            }
-
             console.log($(window).width())
-            if($(window).width()<=1183 && $(window).width()>783) {
+            if($(window).width()<=1183) {
                 $(".cont2_slide").css({width: 800})
                 $("#content2 .slick-track").css({width: 800})
             }
