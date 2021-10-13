@@ -260,7 +260,7 @@
                 <h2>5천년 역사</h2>
                 <h3>재미있는 동영상</h3>
             </hgroup>
-            <div id="cont4slideWrap" >
+            <div id="cont4slideWrap">
                 <ul class="responsive slider">
                     <li><a href='#' class='video1'>북한산</a></li>
                     <li><a href='#' class='video2'>고양 북한산성 답사기</a></li>
@@ -456,6 +456,18 @@
             }
         })
         window.addEventListener("resize", function () {
+            $("#bookWrap li a").on("click", function (e) {
+                e.preventDefault()
+            })
+            // 동영상 a클릭 이벤트 막아놓음
+            $("#cont4slideWrap ul.slider a").on("click", function (e) {
+                $("#main_book").css({
+                    backgroundImage: "url(" + ($(this).attr("href")) + ")"
+                })
+                $("#main_book").text($(this).text())
+                e.preventDefault()
+            })
+
             console.log($(window).width())
             if ($(window).width() <= 1183 && $(window).width() > 783) {
                 $(".cont2_slide").css({
@@ -484,8 +496,6 @@
             // console.log(num1)
         })
         */
-
-        
     </script>
 </body>
 

@@ -467,7 +467,7 @@ html,body {
 
 #cont2ulWrap ul.cont2_slide li a p {
     position: relative; font-size: 7px;
-    top: calc(50% - 30px);
+    top: calc(50% - 80px);
     width: 45%; margin: 0 auto;
     color: #fff;
     opacity: 0; transition: 0.5s;
