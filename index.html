@@ -105,14 +105,14 @@
                     <a href="#" id="main_book">main_book_역사가 담긴 고양 문화유산</a>
                     <div id="cont1_2_slideWrap">
                         <ul id="bookWrap" class="variable slider">
-                            <li><a href="#" class="book1">역사가 담긴 고양 북한산 답사길</a></li>
-                            <li><a href="#" class="book2">고양의 문화유산</a></li>
-                            <li><a href="#" class="book3">가와지 볍씨 자료실</a></li>
-                            <li><a href="#" class="book4">고양의 역사와 인물</a></li>
-                            <li><a href="#" class="book5">고양의 지명이야기</a></li>
-                            <li><a href="#" class="book6">사진으로 보는 고양의 문화유산</a></li>
-                            <li><a href="#" class="book7">우리 마을 고양의 문화재 이야기</a></li>
-                            <li><a href="#" class="book8">길- 고양 문화유산 이야기</a></li>
+                            <li><a href="images/e_book1.png" class="book1">역사가 담긴 고양 북한산 답사길</a></li>
+                            <li><a href="images/e_book2.png" class="book2">고양의 문화유산</a></li>
+                            <li><a href="images/e_book3.png" class="book3">가와지 볍씨 자료실</a></li>
+                            <li><a href="images/e_book4.png" class="book4">고양의 역사와 인물</a></li>
+                            <li><a href="images/e_book5.png" class="book5">고양의 지명이야기</a></li>
+                            <li><a href="images/e_book6.png" class="book6">사진으로 보는 고양의 문화유산</a></li>
+                            <li><a href="images/e_book7.png" class="book7">우리 마을 고양의 문화재 이야기</a></li>
+                            <li><a href="images/e_book8.png" class="book8">길- 고양 문화유산 이야기</a></li>
                             <!-- 나중에 늘리기... -->
                         </ul>
                     </div>
@@ -383,18 +383,18 @@
         $(document).ready(function(){
             if($(window).width()<=1183) {
                 $(".cont2_slide").css({width: 800})
-                $(".slick-track").css({width: 800})
+                $("#content2 .slick-track").css({width: 800})
             }
         })
         window.addEventListener("resize",function(){
             console.log($(window).width())
             if($(window).width()<=1183) {
                 $(".cont2_slide").css({width: 800})
-                $(".slick-track").css({width: 800})
+                $("#content2 .slick-track").css({width: 800})
             }
             else {
                 $(".cont2_slide").css({width: 100+"%"})
-                $(".slick-track").css({width: 100+"%"})
+                $("#content2 .slick-track").css({width: 100+"%"})
             }
         })
         

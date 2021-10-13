@@ -118,12 +118,19 @@ $(document).ready(function(){
     }
 
     // 발간자료실(content1_2) 
-    // e-book
-    $("#bookWrap li").on("click",function(e){
-        $("#main_book").css({
-            backgroundImage : "url(./images/e_book"+($(this).index()+1)+".png)"
+    // bookWrap
+    for(let i=0;i<$("#bookWrap li").length;i++){
+        $("#bookWrap li a:eq("+i+")").css({
+            backgroundImage : "url("+$("#bookWrap li a:eq("+i+")").attr("href")+")"
         })
-        // console.log($(this).index()+1)
+    }
+
+    // e-book
+    $("#bookWrap li a").on("click",function(e){
+        $("#main_book").css({
+            backgroundImage : "url("+($(this).attr("href"))+")"
+        })
+        // console.log($(this).attr("href"),"main")
         e.preventDefault()
     })
 
