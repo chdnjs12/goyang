@@ -1132,16 +1132,16 @@ html,body {
     /* 이색전시관 */
     #content2 { height: 1550px; }
     #content2 h3 { padding-bottom: 0; }
-    #cont2slideWrap { width: 400px; height: 1200px; 
-        padding-top: 90px; }
-    #cont2ulWrap { width: 350px; margin: 0 auto; }
-    #cont2ulWrap ul.cont2_slide {  margin: 0 10px; width: 330px; }
+    #cont2slideWrap { width: 400px; height: 1280px; 
+        padding-top: 90px; overflow: scroll; }
+    #cont2ulWrap { width: 380px; margin: 0 auto; }
+    #cont2ulWrap ul.cont2_slide { width: 380px; }
     #cont2ulWrap ul.cont2_slide li { 
         float: none; 
         display: block;
-        width: 350px;
+        width: 360px;
         height: 280px;
-        margin: 25px auto;
+        margin: 25px 10px;
     }
     #cont2ulWrap ul.cont2_slide li a { padding-top: 10px; }
     /* 이색전시관 버튼 */ 
