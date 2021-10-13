@@ -8,7 +8,7 @@
     <!-- <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     <script src="jquery-3.6.0.min.js"></script>
     <!-- <script src="jquery-migrate-1.4.1.min.js"></script> -->
-    <script src="common.js"></script>
+    <script src="common.js" async></script>
     <link href="common.css" rel="stylesheet">
     <link href="slick.css" rel="stylesheet">
     <!-- <link href="slick-master/slick-theme.css" rel="stylesheet"> -->
@@ -144,7 +144,8 @@
                             <div>
                                 <a href="#">
                                     <p><span>갤러리 '가온'</span><br>
-                                        일산동구청 유휴 공간인 2층을 활용해 운영중인 "갤러리 가온"은 2012년 7월 고양시 관공서 최초로 전시를 시작했으며, 일산동구청을 시작으로 고양시청과 덕양구청이 공공 갤러리관을 운영중에 있습니다. 
+                                        일산동구청 유휴 공간인 2층을 활용해 운영중인 "갤러리 가온"은 2012년 7월 고양시 관공서 최초로 전시를 시작했으며, 일산동구청을 시작으로
+                                        고양시청과 덕양구청이 공공 갤러리관을 운영중에 있습니다.
                                     </p>
                                 </a>
                             </div>
@@ -153,7 +154,8 @@
                             <div>
                                 <a href="#">
                                     <p><span>갤러리 '꿈'</span><br>
-                                        덕양구청 꿈 갤러리는 구청 청사를 방문한 고양시민 및 직원들에게 그림, 글씨, 사진 등의 다채로운 볼거리를 제공함으로써 바쁜 일상 속의 여유를 선사해주는 문화·예술공간입니다. 
+                                        덕양구청 꿈 갤러리는 구청 청사를 방문한 고양시민 및 직원들에게 그림, 글씨, 사진 등의 다채로운 볼거리를 제공함으로써 바쁜 일상 속의 여유를
+                                        선사해주는 문화·예술공간입니다.
                                     </p>
                                 </a>
                             </div>
@@ -162,7 +164,8 @@
                             <div>
                                 <a href="#">
                                     <p><span>아쿠아플라넷</span><br>
-                                        '아쿠아'는 바다의 웅장함, 그리고 해양과학과 인간의 만남을 뜻하며, ‘플라넷’은 여기서만 느낄 수 있는 첨단과학의 컨셉트를 관람객이 직접 우주행성을 탐험하듯 즐기게 한다는 의미를 가지고 있습니다.
+                                        '아쿠아'는 바다의 웅장함, 그리고 해양과학과 인간의 만남을 뜻하며, ‘플라넷’은 여기서만 느낄 수 있는 첨단과학의 컨셉트를 관람객이 직접
+                                        우주행성을 탐험하듯 즐기게 한다는 의미를 가지고 있습니다.
                                     </p>
                                 </a>
                             </div>
@@ -257,22 +260,18 @@
                 <h2>5천년 역사</h2>
                 <h3>재미있는 동영상</h3>
             </hgroup>
-            <div id="cont4slideWrap" class="variable slider">
-                <ul class="slide">
+            <div id="cont4slideWrap" >
+                <ul class="responsive slider">
                     <li><a href='#' class='video1'>북한산</a></li>
                     <li><a href='#' class='video2'>고양 북한산성 답사기</a></li>
                     <li><a href='#' class='video3'>5천년 역사의 씨앗 고양 가와지볍씨</a></li>
                     <li><a href='#' class='video4'>고양 문화유산이야기4 - 옛길에서 만나는 문화유산2</a></li>
                     <li><a href='#' class='video5'>고양북한산의 아름다움을 담다</a></li>
-                </ul>
-                <ul class="slide">
                     <li><a href='#' class='video6'>고양 문화유산이야기3 - 고봉산기슭, 문화유산을 찾다2</a></li>
                     <li><a href='#' class='video7'>고양 문화유산이야기2 - 한강, 고양의 역사와 함께 흐르다2</a></li>
                     <li><a href='#' class='video8'>고양 문화유산이야기1 - 북한산 문화유산에 오르다2</a></li>
                     <li><a href='#' class='video9'>고양 문화유산이야기4 - 옛길에서 만나는 문화유산1</a></li>
                     <li><a href='#' class='video10'>고양 문화유산이야기3 - 고봉산기슭, 문화유산을 찾다1</a></li>
-                </ul>
-                <ul class="slide">
                     <li><a href='#' class='video11'>고양 문화유산이야기2 - 한강, 고양의 역사와 함께 흐르다1</a></li>
                     <li><a href='#' class='video12'>고양 문화유산이야기1 - 북한산 문화유산에 오르다1</a></li>
                     <li><a href='#' class='video13'>고양의 독립운동 이야기</a></li>
@@ -364,7 +363,7 @@
             <address><strong>민원콜센터(시청):</strong>031-909-9000
                 <span><strong>수화상담(경기도):</strong>070-7947-3393</span>
             </address>
-        <small>copyright&copy;2017 Goyancity All Rights Reserved</small>
+            <small>copyright&copy;2017 Goyancity All Rights Reserved</small>
         </div>
         <ul id="footerBtn">
             <li><a href="#">유튜브로 이동</a></li>
@@ -375,30 +374,84 @@
 
     <script src="slick.min.js"></script>
     <script>
-        let num1 = 1;
         $(".variable").slick({
-          dots: true,
-          infinite: true,
-          variableWidth: true
+            dots: true,
+            infinite: true,
+            variableWidth: true
         });
-        $(document).ready(function(){
-            if($(window).width()<=1183) {
-                $(".cont2_slide").css({width: 800})
-                $("#content2 .slick-track").css({width: 800})
+        $('.responsive').slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 5,
+            slidesToScroll: 5,
+            responsive: [{
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 800,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 400,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+        // let num1 = 1;
+
+        $(document).ready(function () {
+            // 동영상 플러그인 끄기
+            if ($(window).width() <= 1183 && $(window).width() >= 783) {
+                $(".cont2_slide").css({
+                    width: 800
+                })
+                $("#content2 .slick-track").css({
+                    width: 800
+                })
+            } else {
+                $(".cont2_slide").css({
+                    width: 100 + "%"
+                })
+                $("#content2 .slick-track").css({
+                    width: 100 + "%"
+                })
             }
         })
-        window.addEventListener("resize",function(){
+        window.addEventListener("resize", function () {
             console.log($(window).width())
-            if($(window).width()<=1183) {
-                $(".cont2_slide").css({width: 800})
-                $("#content2 .slick-track").css({width: 800})
-            }
-            else {
-                $(".cont2_slide").css({width: 100+"%"})
-                $("#content2 .slick-track").css({width: 100+"%"})
+            if ($(window).width() <= 1183 && $(window).width() > 783) {
+                $(".cont2_slide").css({
+                    width: 800
+                })
+                $("#content2 .slick-track").css({
+                    width: 800
+                })
+            } else {
+                $(".cont2_slide").css({
+                    width: 100 + "%"
+                })
+                $("#content2 .slick-track").css({
+                    width: 100 + "%"
+                })
             }
         })
-        
+
         /*
         $("#content1_2 .slick-next").on("click",function(){
             num1++
@@ -409,8 +462,9 @@
             // console.log(num1)
         })
         */
-       
-  </script>
+
+        
+    </script>
 </body>
 
 </html>
