@@ -105,7 +105,7 @@
                     <h3>발간 자료실</h3>
                     <a href="#" id="main_book">main_book_역사가 담긴 고양 문화유산</a>
                     <div id="cont1_2_slideWrap">
-                        <ul id="bookWrap" class="variable slider">
+                        <ul id="bookWrap" class="responsive slider">
                             <li><a href="images/e_book1.png" class="book1">역사가 담긴 고양 북한산 답사길</a></li>
                             <li><a href="images/e_book2.png" class="book2">고양의 문화유산</a></li>
                             <li><a href="images/e_book3.png" class="book3">가와지 볍씨 자료실</a></li>
@@ -379,7 +379,7 @@
             infinite: true,
             variableWidth: true
         });
-        $('.responsive').slick({
+        $('#content4 .responsive').slick({
             dots: true,
             infinite: false,
             speed: 300,
@@ -406,6 +406,28 @@
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+        // let num1 = 1;
+
+        $('#content1_2 .responsive').slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            responsive: [{
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        infinite: true,
+                        dots: true
                     }
                 }
                 // You can unslick at a given breakpoint now by adding:

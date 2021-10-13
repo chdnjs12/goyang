@@ -301,7 +301,7 @@ html,body {
 }
 #bookWrap {
     position: absolute; bottom: 0;
-    width: 1520px;
+    width: 570px;
 }
 #bookWrap li {
     float: left;
@@ -1042,6 +1042,7 @@ html,body {
     #content1_2Wrap h3 { width: 350px; font-size: 60px; top: 55px;right: 30px; }
     /* e-book */
     #main_book { width: 350px; height: 427px; margin-left: 30px; }
+    #bookWrap { width: 380px;}
     #cont1_2_slideWrap { width: 380px; bottom: 0px; right: 20px; } 
     /* 발간자료실 버튼 */
     /* #cont1_2btn { top:130px; right: 170px; }

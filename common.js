@@ -147,7 +147,8 @@ $(document).ready(function(){
         $("#main_book").css({
             backgroundImage : "url("+($(this).attr("href"))+")"
         })
-        // console.log($(this).attr("href"),"main")
+        $("#main_book").text($(this).text())
+        // console.log($("#main_book").text())
         e.preventDefault()
     })
 
