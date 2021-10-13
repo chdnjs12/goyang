@@ -1188,7 +1188,8 @@ html,body {
     }
     /* 재미있는 동영상 */
     /* #content4 { height: 500px;} */
-    #cont4slideWrap { width: 500px; }
+    #cont4slideWrap { width: 400px; margin: 0 auto; }
+    #cont4slideWrap ul.slider li a { margin-left: 15px; width: 150px; }
     #content4 .slick-dots li button { width: 10px; height: 10px; text-indent: -9999px; border: 0; }
     #content4 .slick-prev, #content4 .slick-next { height: 0; }
 
