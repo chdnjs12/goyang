@@ -1135,7 +1135,7 @@ html,body {
     #cont2slideWrap { width: 400px; height: 1200px; 
         padding-top: 90px; }
     #cont2ulWrap { width: 350px; margin: 0 auto; }
-    #cont2ulWrap ul.cont2_slide {  width: 350px; }
+    #cont2ulWrap ul.cont2_slide {  margin: 0 10px; width: 330px; }
     #cont2ulWrap ul.cont2_slide li { 
         float: none; 
         display: block;
