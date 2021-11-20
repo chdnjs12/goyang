@@ -20,7 +20,7 @@ $(document).ready(function(){
     let cont2_liWidth = $("#cont2slideWrap ul li").width()
     // let cont2_Num = 0
     // 전시관 setInterval
-    // let cont2_timer = setInterval(cont2_next,2000)
+    // let cont2_timer = setInterval(cont2_next,3000)
     // console.log(cont2_liWidth)
 
     //동영상(content4)
